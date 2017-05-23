@@ -31,6 +31,7 @@ public class CacheConfig {
 	@Value("${redis.master.name}")
 	private String masterName;
 	@Value("${redis.password}")
+	
 	private String password;
 	@Value("${redis.dbIndex}")
 	private int dbIndex;
