@@ -7,4 +7,11 @@
   </parent>
   <artifactId>ssm-query</artifactId>
   <packaging>war</packaging>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.liuzhenhui.ssmy</groupId>
+	    <artifactId>ssm-apiinner</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

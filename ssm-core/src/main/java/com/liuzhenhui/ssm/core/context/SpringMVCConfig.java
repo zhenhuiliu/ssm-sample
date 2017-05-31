@@ -40,7 +40,7 @@ import com.liuzhenhui.commons.utils.springmvc.interceptor.ValidateInterceptor;
 @ComponentScan(basePackages = "com.liuzhenhui.ssm.web", useDefaultFilters = false, includeFilters = @Filter(Controller.class) )
 public class SpringMVCConfig extends WebMvcConfigurerAdapter {
 
-	@Bean
+	/*@Bean
 	public RequestMappingHandlerAdapter requestMappingHandlerAdapter() {
 		RequestMappingHandlerAdapter adapter = new org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter();
 
@@ -115,5 +115,5 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter {
 		commonsMultipartResolver.setDefaultEncoding("UTF-8");
 		// commonsMultipartResolver.setMaxUploadSize(30*1024*1024);
 		return commonsMultipartResolver;
-	}
+	}*/
 }

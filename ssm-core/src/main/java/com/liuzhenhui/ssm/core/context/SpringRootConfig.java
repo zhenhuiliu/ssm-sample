@@ -26,7 +26,8 @@ import org.springframework.stereotype.Controller;
 @Configuration
 @EnableAspectJAutoProxy
 /*@Import({ DubboConfig.class, DubboClientConfig.class, DubboServiceConfig.class, CacheConfig.class })*/
-@ComponentScan(basePackages = "com.liuzhenhui.ssm", excludeFilters = { @Filter(Controller.class), @Filter(Configuration.class) })
+@Import({MariaDBConfig.class, MyBatisConfig.class})
+@ComponentScan(basePackages = "com.liuzhenhui.ssm.core", excludeFilters = { @Filter(Controller.class), @Filter(Configuration.class) })
 public class SpringRootConfig {
 
 	@Bean

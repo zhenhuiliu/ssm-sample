@@ -1,5 +1,7 @@
 package com.liuzhenhui.ssm.core.context;
 
+import java.beans.PropertyVetoException;
+
 import javax.sql.DataSource;
 
 import org.slf4j.Logger;
@@ -19,19 +21,50 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  * @author qinji.xu
  */
 @Configuration
-@PropertySource("classpath:/system.properties")
+@PropertySource("classpath:/db.properties")
 public class MariaDBConfig {
 
 	private static final Logger logger = LoggerFactory.getLogger(MariaDBConfig.class);
 
-	@Value("${com.lefu.alliance.core.ds.name}")
-	private String dsName;
+	@Value("${driver}")
+	private String driverClass;
+	
+	@Value("${url}")
+	private String jdbcUrl;
+	
+	@Value("${username}")
+	private String userName;
+	
+	@Value("${password}")
+	private String password;
+	
+	@Value("${initialSize}")
+	private String initialSize;
+	
+	@Value("${maxActive}")
+	private String maxActive;
+	
+	@Value("${maxIdle}")
+	private String maxIdle;
+	
+	@Value("${minIdle}")
+	private String minIdle;
+	
+	@Value("${maxWait}")
+	private String maxWait;
 
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {
 		long l = System.currentTimeMillis();
-		logger.info("dsName = {} , {}", dsName, l);
-		DataSource ds = new ComboPooledDataSource();
+		ComboPooledDataSource ds = new ComboPooledDataSource();
+		try {
+			ds.setDriverClass(driverClass);
+			ds.setJdbcUrl(jdbcUrl);
+			ds.setUser(userName);
+			ds.setPassword(password);
+		} catch (PropertyVetoException e) {
+			
+		}
 		return ds;
 	}
 

@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @author qinji.xu
  */
 @Configuration
-@MapperScan("com.lefu.alliance.core.dao")
+@MapperScan("com.liuzhenhui.ssm.dao.dao")
 @EnableTransactionManagement(order = 0)
 public class MyBatisConfig {
 	
