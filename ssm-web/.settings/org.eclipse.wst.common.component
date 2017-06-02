@@ -6,6 +6,9 @@
         <dependent-module archiveName="commons-utils-all.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/commons-utils-all/commons-utils-all">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="ssm-apiinner.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ssm-apiinner/ssm-apiinner">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ssm-web"/>
         <property name="java-output-path" value="/ssm-web/target/classes"/>
     </wb-module>

@@ -101,8 +101,8 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		// http前置请求拦截器
-		registry.addInterceptor(new CommonHttpRequestInterceptor()).addPathPatterns("/**")
-				.excludePathPatterns("/notify/recommender/memberWeixinpayNotify");
+		//registry.addInterceptor(new CommonHttpRequestInterceptor()).addPathPatterns("/**")
+		//		.excludePathPatterns("/notify/recommender/memberWeixinpayNotify");
 		// 公共参数拦截器
 		registry.addInterceptor(new ValidateInterceptor()).addPathPatterns("/**").excludePathPatterns("/web/**");
 		super.addInterceptors(registry);

@@ -7,7 +7,7 @@
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd
 		">
 	<!-- App版本 -->
-	<dubbo:reference id="appVersionQueryFacade" group="query"
-		interface="com.lefu.alliance.api.inner.dubbo.AppVersionFacade" check="false" retries="0" timeout="60000" />
+	<dubbo:reference id="testFacade" group="core"
+		interface="com.liuzhenhui.ssm.api.inner.dubbo.TestFacade" check="false" retries="0" timeout="60000" />
 
 </beans>

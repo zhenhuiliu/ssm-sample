@@ -40,11 +40,11 @@
 	</settings>
 
 	<typeHandlers>
-		<typeHandler javaType="java.lang.Enum" jdbcType="VARCHAR" handler="com.lefu.commons.web.mybatis.EnumHandler"/>
+		<typeHandler javaType="java.lang.Enum" jdbcType="VARCHAR" handler="com.liuzhenhui.commons.utils.mybatis.EnumHandler"/>
 	</typeHandlers>
 
 	<plugins>
-		<plugin interceptor="com.lefu.commons.web.mybatis.PagePlugin">
+		<plugin interceptor="com.liuzhenhui.commons.utils.mybatis.PagePlugin">
 		</plugin>
 	</plugins>
 </configuration>

@@ -5,6 +5,7 @@
 	<projects>
 		<project>commons-utils</project>
 		<project>commons-utils-all</project>
+		<project>ssm-apiinner</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -37,7 +37,7 @@ import com.liuzhenhui.commons.utils.springmvc.interceptor.ValidateInterceptor;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.liuzhenhui.ssm.web", useDefaultFilters = false, includeFilters = @Filter(Controller.class) )
+@ComponentScan(basePackages = "com.liuzhenhui.ssm.core.web", useDefaultFilters = false, includeFilters = @Filter(Controller.class) )
 public class SpringMVCConfig extends WebMvcConfigurerAdapter {
 
 	/*@Bean
