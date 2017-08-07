@@ -32,7 +32,7 @@ public class MariaDBConfig {
 	@Value("${url}")
 	private String jdbcUrl;
 	
-	@Value("${username}")
+	@Value("${jdcbUserName}")
 	private String userName;
 	
 	@Value("${password}")
@@ -54,17 +54,13 @@ public class MariaDBConfig {
 	private String maxWait;
 
 	@Bean(destroyMethod = "close")
-	public DataSource dataSource() {
+	public DataSource dataSource() throws PropertyVetoException {
 		long l = System.currentTimeMillis();
 		ComboPooledDataSource ds = new ComboPooledDataSource();
-		try {
-			ds.setDriverClass(driverClass);
-			ds.setJdbcUrl(jdbcUrl);
-			ds.setUser(userName);
-			ds.setPassword(password);
-		} catch (PropertyVetoException e) {
-			
-		}
+		ds.setDriverClass(driverClass);
+		ds.setJdbcUrl(jdbcUrl);
+		ds.setUser(userName);
+		ds.setPassword(password);
 		return ds;
 	}
 
